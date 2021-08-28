@@ -14,3 +14,4 @@ sudo chmod +x /etc/app/web-53
 sudo cp /etc/proxy/wsr.conf /etc/nginx/conf.d/
 
 sudo systemctl restart nginx
+sudo systemctl enable haproxy

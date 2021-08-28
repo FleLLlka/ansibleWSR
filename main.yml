@@ -1,4 +1,5 @@
 - hosts: all
+  become: True
   vars_files:
     - ./group_vars/all.yaml
     - ./host_vars/platform_region_01.yaml
@@ -13,18 +14,48 @@
           - /etc/proxy
           - /etc/deploy
         state: directory
+
+
     - name: Copy application files to nodes
       copy: 
         src: ./app
         dest: /etc/app
+
+
     - name: Copy proxy files to nodes
       template: 
         src: ./proxy
         dest: /etc/proxy
+
+
     - name: Copy deploy scripts to nodes
       copy: 
         src: ./deploy
         dest: /etc/deploy
+
+
+    - name: Install haproxy application
+      apt:
+              name: haproxy
+              state: latest
+              update_cache: True
+
+    - name: Run a backup script
+      shell: /etc/deploy/backup.sh
+
+
+    - name: Copy the haproxy template to cfg folder
+      template:
+              src: ./proxy/haproxy.cfg
+              dest: /etc/haproxy/haproxy.cfg
+
+
+    - name: Restart haproxy
+      service: 
+              name: haproxy 
+              state: restarted
+
+
     - name: Use the deploy script
       shell: "/etc/deploy/deploy.sh"
 
