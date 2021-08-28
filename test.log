@@ -1,0 +1,208 @@
+2021-08-28 07:17:21,167 p=10587 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with auto plugin: Syntax Error while loading YAML.   did not find expected key  The error appears to be in
+'/home/azadmin/ansibleWSR/inventory.yaml': line 4, column 3, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:
+ansible_ssh_pass: {{ password }}   hosts:   ^ here
+
+2021-08-28 07:17:21,168 p=10587 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with yaml plugin: Syntax Error while loading YAML.   did not find expected key  The error appears to be in
+'/home/azadmin/ansibleWSR/inventory.yaml': line 4, column 3, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:
+ansible_ssh_pass: {{ password }}   hosts:   ^ here
+
+2021-08-28 07:17:21,169 p=10587 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with ini plugin: Invalid host pattern 'all:' supplied, ending in ':' is not allowed, this character is reserved to
+provide a port.
+
+2021-08-28 07:17:21,170 p=10587 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory.yaml as an inventory source
+
+2021-08-28 07:17:21,170 p=10587 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:17:21,171 p=10587 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-08-28 07:17:21,481 p=10587 u=azadmin n=ansible | PLAY [all] ***********************************************************************************************************************************************************************************
+2021-08-28 07:17:21,481 p=10587 u=azadmin n=ansible | skipping: no hosts matched
+2021-08-28 07:17:21,482 p=10587 u=azadmin n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2021-08-28 07:17:21,483 p=10587 u=azadmin n=ansible | Saturday 28 August 2021  07:17:21 +0000 (0:00:00.016)       0:00:00.016 ******* 
+2021-08-28 07:17:21,483 p=10587 u=azadmin n=ansible | =============================================================================== 
+2021-08-28 07:18:50,183 p=10929 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with auto plugin: Syntax Error while loading YAML.   found unacceptable key (unhashable type: 'AnsibleMapping')  The
+error appears to be in '/home/azadmin/ansibleWSR/inventory.yaml': line 2, column 22, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to
+be:  all:   ansible_ssh_user: {{ adminuser }}                      ^ here We could be wrong, but this one looks like it might be an issue with missing quotes. Always quote template
+expression brackets when they start a value. For instance:      with_items:       - {{ foo }}  Should be written as:      with_items:       - "{{ foo }}"
+
+2021-08-28 07:18:50,184 p=10929 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with yaml plugin: Syntax Error while loading YAML.   found unacceptable key (unhashable type: 'AnsibleMapping')  The
+error appears to be in '/home/azadmin/ansibleWSR/inventory.yaml': line 2, column 22, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to
+be:  all:   ansible_ssh_user: {{ adminuser }}                      ^ here We could be wrong, but this one looks like it might be an issue with missing quotes. Always quote template
+expression brackets when they start a value. For instance:      with_items:       - {{ foo }}  Should be written as:      with_items:       - "{{ foo }}"
+
+2021-08-28 07:18:50,185 p=10929 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with ini plugin: Invalid host pattern 'all:' supplied, ending in ':' is not allowed, this character is reserved to
+provide a port.
+
+2021-08-28 07:18:50,185 p=10929 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory.yaml as an inventory source
+
+2021-08-28 07:18:50,186 p=10929 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:18:50,186 p=10929 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-08-28 07:18:50,505 p=10929 u=azadmin n=ansible | PLAY [all] ***********************************************************************************************************************************************************************************
+2021-08-28 07:18:50,506 p=10929 u=azadmin n=ansible | skipping: no hosts matched
+2021-08-28 07:18:50,506 p=10929 u=azadmin n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2021-08-28 07:18:50,507 p=10929 u=azadmin n=ansible | Saturday 28 August 2021  07:18:50 +0000 (0:00:00.017)       0:00:00.017 ******* 
+2021-08-28 07:18:50,507 p=10929 u=azadmin n=ansible | =============================================================================== 
+2021-08-28 07:21:12,394 p=11286 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with auto plugin:
+Syntax Error while loading YAML.   found unacceptable key (unhashable type: 'AnsibleMapping')
+The error appears to be in '/home/azadmin/ansibleWSR/inventory.yaml': line 4, column 32, but
+may be elsewhere in the file depending on the exact syntax problem.  The offending line
+appears to be:      platform_region_01:             ansible_ssh_host: {{ ansible_host }}
+^ here We could be wrong, but this one looks like it might be an issue with missing quotes.
+Always quote template expression brackets when they start a value. For instance:
+with_items:       - {{ foo }}  Should be written as:      with_items:       - "{{ foo }}"
+
+2021-08-28 07:21:12,397 p=11286 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with yaml plugin:
+Syntax Error while loading YAML.   found unacceptable key (unhashable type: 'AnsibleMapping')
+The error appears to be in '/home/azadmin/ansibleWSR/inventory.yaml': line 4, column 32, but
+may be elsewhere in the file depending on the exact syntax problem.  The offending line
+appears to be:      platform_region_01:             ansible_ssh_host: {{ ansible_host }}
+^ here We could be wrong, but this one looks like it might be an issue with missing quotes.
+Always quote template expression brackets when they start a value. For instance:
+with_items:       - {{ foo }}  Should be written as:      with_items:       - "{{ foo }}"
+
+2021-08-28 07:21:12,399 p=11286 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with ini plugin:
+Invalid host pattern 'all:' supplied, ending in ':' is not allowed, this character is
+reserved to provide a port.
+
+2021-08-28 07:21:12,399 p=11286 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory.yaml as an inventory source
+
+2021-08-28 07:21:12,400 p=11286 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:21:12,401 p=11286 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2021-08-28 07:21:12,711 p=11286 u=azadmin n=ansible | PLAY [all] ***********************************************************************************
+2021-08-28 07:21:12,711 p=11286 u=azadmin n=ansible | skipping: no hosts matched
+2021-08-28 07:21:12,712 p=11286 u=azadmin n=ansible | PLAY RECAP ***********************************************************************************
+2021-08-28 07:21:12,713 p=11286 u=azadmin n=ansible | Saturday 28 August 2021  07:21:12 +0000 (0:00:00.021)       0:00:00.021 ******* 
+2021-08-28 07:21:12,714 p=11286 u=azadmin n=ansible | =============================================================================== 
+2021-08-28 07:24:08,267 p=11649 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory as an inventory source
+
+2021-08-28 07:24:08,268 p=11649 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:24:08,269 p=11649 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2021-08-28 07:24:08,591 p=11649 u=azadmin n=ansible | PLAY [all] ***********************************************************************************
+2021-08-28 07:24:08,592 p=11649 u=azadmin n=ansible | skipping: no hosts matched
+2021-08-28 07:24:08,593 p=11649 u=azadmin n=ansible | PLAY RECAP ***********************************************************************************
+2021-08-28 07:24:08,593 p=11649 u=azadmin n=ansible | Saturday 28 August 2021  07:24:08 +0000 (0:00:00.017)       0:00:00.017 ******* 
+2021-08-28 07:24:08,594 p=11649 u=azadmin n=ansible | =============================================================================== 
+2021-08-28 07:24:44,365 p=11974 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory as an inventory source
+
+2021-08-28 07:24:44,366 p=11974 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:24:44,367 p=11974 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2021-08-28 07:24:44,695 p=11974 u=azadmin n=ansible | PLAY [all] ***********************************************************************************
+2021-08-28 07:24:44,696 p=11974 u=azadmin n=ansible | skipping: no hosts matched
+2021-08-28 07:24:44,697 p=11974 u=azadmin n=ansible | PLAY RECAP ***********************************************************************************
+2021-08-28 07:24:44,697 p=11974 u=azadmin n=ansible | Saturday 28 August 2021  07:24:44 +0000 (0:00:00.017)       0:00:00.017 ******* 
+2021-08-28 07:24:44,698 p=11974 u=azadmin n=ansible | =============================================================================== 
+2021-08-28 07:24:54,186 p=12013 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory as an inventory source
+
+2021-08-28 07:24:54,187 p=12013 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:24:54,188 p=12013 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2021-08-28 07:26:17,666 p=12031 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory with yaml plugin: Syntax
+Error while loading YAML.   did not find expected <document start>  The error appears to be
+in '/home/azadmin/ansibleWSR/inventory': line 19, column 1, but may be elsewhere in the file
+depending on the exact syntax problem.  The offending line appears to be:  [all]
+platform_region_01 ansible_ssh_host={{ ansible_host }} ansible_ssh_user={{ adminuser }}
+ansible_ssh_pass={{ password }} ^ here We could be wrong, but this one looks like it might be
+an issue with missing quotes. Always quote template expression brackets when they start a
+value. For instance:      with_items:       - {{ foo }}  Should be written as:
+with_items:       - "{{ foo }}"
+
+2021-08-28 07:26:17,667 p=12031 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory with ini plugin:
+/home/azadmin/ansibleWSR/inventory:19: Expected key=value host variable assignment, got:
+ansible_host
+
+2021-08-28 07:26:17,668 p=12031 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory as an inventory source
+
+2021-08-28 07:26:17,668 p=12031 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:26:17,670 p=12031 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2021-08-28 07:30:32,545 p=12060 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory with yaml plugin: Syntax
+Error while loading YAML.   did not find expected <document start>  The error appears to be
+in '/home/azadmin/ansibleWSR/inventory': line 19, column 1, but may be elsewhere in the file
+depending on the exact syntax problem.  The offending line appears to be:  [all]
+platform_region_01 ansible_ssh_host={{ ansible_host }} ansible_ssh_user={{ adminuser }}
+ansible_ssh_pass={{ password }} ^ here We could be wrong, but this one looks like it might be
+an issue with missing quotes. Always quote template expression brackets when they start a
+value. For instance:      with_items:       - {{ foo }}  Should be written as:
+with_items:       - "{{ foo }}"
+
+2021-08-28 07:30:32,546 p=12060 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory with ini plugin:
+/home/azadmin/ansibleWSR/inventory:19: Expected key=value host variable assignment, got:
+ansible_host
+
+2021-08-28 07:30:32,547 p=12060 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory as an inventory source
+
+2021-08-28 07:30:32,548 p=12060 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:30:32,549 p=12060 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2021-08-28 07:32:31,189 p=12086 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory with yaml plugin: Syntax
+Error while loading YAML.   did not find expected <document start>  The error appears to be
+in '/home/azadmin/ansibleWSR/inventory': line 19, column 1, but may be elsewhere in the file
+depending on the exact syntax problem.  The offending line appears to be:  [all]
+platform_region_01 ansible_ssh_host={{ ansible_host }} ansible_ssh_user={{ adminuser }}
+ansible_ssh_pass={{ password }} ^ here We could be wrong, but this one looks like it might be
+an issue with missing quotes. Always quote template expression brackets when they start a
+value. For instance:      with_items:       - {{ foo }}  Should be written as:
+with_items:       - "{{ foo }}"
+
+2021-08-28 07:32:31,191 p=12086 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory with ini plugin:
+/home/azadmin/ansibleWSR/inventory:19: Expected key=value host variable assignment, got:
+ansible_host
+
+2021-08-28 07:32:31,191 p=12086 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory as an inventory source
+
+2021-08-28 07:32:31,192 p=12086 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:32:31,193 p=12086 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2021-08-28 07:45:53,762 p=12697 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with auto plugin:
+Syntax Error while loading YAML.   found unacceptable key (unhashable type: 'AnsibleMapping')
+The error appears to be in '/home/azadmin/ansibleWSR/inventory.yaml': line 10, column 32, but
+may be elsewhere in the file depending on the exact syntax problem.  The offending line
+appears to be:      platform_region_01:             ansible_ssh_host: {{ platform_01_ip }}
+^ here We could be wrong, but this one looks like it might be an issue with missing quotes.
+Always quote template expression brackets when they start a value. For instance:
+with_items:       - {{ foo }}  Should be written as:      with_items:       - "{{ foo }}"
+
+2021-08-28 07:45:53,765 p=12697 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with yaml plugin:
+Syntax Error while loading YAML.   found unacceptable key (unhashable type: 'AnsibleMapping')
+The error appears to be in '/home/azadmin/ansibleWSR/inventory.yaml': line 10, column 32, but
+may be elsewhere in the file depending on the exact syntax problem.  The offending line
+appears to be:      platform_region_01:             ansible_ssh_host: {{ platform_01_ip }}
+^ here We could be wrong, but this one looks like it might be an issue with missing quotes.
+Always quote template expression brackets when they start a value. For instance:
+with_items:       - {{ foo }}  Should be written as:      with_items:       - "{{ foo }}"
+
+2021-08-28 07:45:53,766 p=12697 u=azadmin n=ansible | [WARNING]:  * Failed to parse /home/azadmin/ansibleWSR/inventory.yaml with ini plugin:
+Invalid host pattern 'all:' supplied, ending in ':' is not allowed, this character is
+reserved to provide a port.
+
+2021-08-28 07:45:53,767 p=12697 u=azadmin n=ansible | [WARNING]: Unable to parse /home/azadmin/ansibleWSR/inventory.yaml as an inventory source
+
+2021-08-28 07:45:53,767 p=12697 u=azadmin n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-08-28 07:45:53,769 p=12697 u=azadmin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit
+localhost does not match 'all'
+
+2021-08-28 07:45:54,074 p=12697 u=azadmin n=ansible | PLAY [all] ***********************************************************************************
+2021-08-28 07:45:54,075 p=12697 u=azadmin n=ansible | skipping: no hosts matched
+2021-08-28 07:45:54,075 p=12697 u=azadmin n=ansible | PLAY RECAP ***********************************************************************************
+2021-08-28 07:45:54,076 p=12697 u=azadmin n=ansible | Saturday 28 August 2021  07:45:54 +0000 (0:00:00.017)       0:00:00.017 ******* 
+2021-08-28 07:45:54,077 p=12697 u=azadmin n=ansible | =============================================================================== 

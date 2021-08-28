@@ -1,10 +1,5 @@
 - hosts: all
   become: True
-  vars_files:
-    - ./group_vars/all.yaml
-    - ./host_vars/platform_region_01.yaml
-    - adminuser: azadmin
-    - password: UB48fHi00pE#OVOx
 
   tasks:
     - name: create app and proxy folder
