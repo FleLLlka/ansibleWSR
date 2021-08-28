@@ -7,16 +7,16 @@ all:
           platform_03_ip: "{{ lookup('env','platform_03_public_ip') }}"
   hosts:
     platform_region_01:
-            ansible_ssh_host: {{ platform_01_ip }}
-            ansible_ssh_pass: {{ password }}
-            ansible_ssh_user: {{ adminuser }}
+            ansible_ssh_host: "{{ platform_01_ip }}"
+            ansible_ssh_pass: "{{ password }}"
+            ansible_ssh_user: "{{ adminuser }}"
     platform_region_02:
-            ansible_ssh_host: {{ platform_02_ip }}
-            ansible_ssh_pass: {{ password }}
-            ansible_ssh_user: {{ adminuser }}
+            ansible_ssh_host: "{{ platform_02_ip }}"
+            ansible_ssh_pass: "{{ password }}"
+            ansible_ssh_user: "{{ adminuser }}"
     platform_region_03:
-           ansible_ssh_host: {{ platform_03_ip }}
-           ansible_ssh_pass: {{ password }}
-           ansible_ssh_user: {{ adminuser }}
+           ansible_ssh_host: "{{ platform_03_ip }}"
+           ansible_ssh_pass: "{{ password }}"
+           ansible_ssh_user: "{{ adminuser }}"
 
 
