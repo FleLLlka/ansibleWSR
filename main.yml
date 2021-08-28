@@ -4,3 +4,27 @@
     - ./host_vars/platform_region_01.yaml
     - adminuser: azadmin
     - password: UB48fHi00pE#OVOx
+
+  tasks:
+    - name: create app and proxy folder
+      file:
+        path: 
+          - /etc/app
+          - /etc/proxy
+          - /etc/deploy
+        state: directory
+    - name: Copy application files to nodes
+      copy: 
+        src: ./app
+        dest: /etc/app
+    - name: Copy proxy files to nodes
+      template: 
+        src: ./proxy
+        dest: /etc/proxy
+    - name: Copy deploy scripts to nodes
+      copy: 
+        src: ./deploy
+        dest: /etc/deploy
+    - name: Use the deploy script
+      shell: "/etc/deploy/deploy.sh"
+
