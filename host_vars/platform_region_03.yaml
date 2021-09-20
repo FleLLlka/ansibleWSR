@@ -1,3 +1,0 @@
-####  CONNECTION SPECIFIC ####
-ansible_host: "{{ lookup('env','platform_03_public_ip') }}"
-
